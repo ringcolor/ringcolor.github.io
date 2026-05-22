@@ -1,0 +1,20 @@
+{
+  "skills": [
+    {
+      "category": "大模型开发",
+      "items": [ "LLM应用开发", "RAG系统设计", "Few-Shot", "CoT","Agent记忆模块设计"]
+    },
+    {
+      "category": "产品&设计",
+      "items": ["Figma", "Photoshop", "用户调研","SPSS数据分析", "AB实验设计"]
+    },
+    {
+      "category": "工具&技术栈",
+      "items": ["Claude Code", "OpenClaw","C/C++", "Python", "React", "HTML/CSS", "Flask", "Arduino"]
+    },
+    {
+      "category": "语言能力",
+      "items": ["中文 (母语)", "英语 (CET-6)-516分"]
+    }
+  ]
+}

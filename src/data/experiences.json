@@ -1,0 +1,40 @@
+{
+  "experiences": [
+    {
+      "id": "exp-1",
+      "title": "AR场景中的第一人称AI协作助手",
+      "role": "",
+      "date": "2025.05 - 2026.02",
+      "paperId": "paper-1"
+    },
+    {
+      "id": "exp-2",
+      "title": "适老化AI虚拟人对话产品",
+      "role": "",
+      "date": "2022.05 - 2023.12",
+      "projectId": "project-2"
+    },
+    {
+      "id": "exp-6",
+      "title": "基于大模型的社交辅助沟通工具",
+      "role": "",
+      "date": "2023.03 - 2023.09",
+      "projectId": "project-1"
+    },
+    {
+      "id": "exp-3",
+      "title": "基于多维语义管理的AI辅助创意支持系统",
+      "role": "",
+      "date": "2024.03 - 2025.10",
+      "paperId": "paper-2"
+    },
+
+    {
+      "id": "exp-4",
+      "title": "基于实时动态图谱推理的人机协作设计系统",
+      "role": "",
+      "date": "2025.12 - 2026.03",
+      "paperId": "paper-4"
+    }
+  ]
+}

@@ -1,0 +1,175 @@
+.cv {
+  max-width: 100%;
+}
+
+.section {
+  margin-bottom: var(--spacing-2xl);
+}
+
+.sectionTitle {
+  font-size: var(--text-xl);
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: var(--spacing-lg);
+  padding-bottom: var(--spacing-xs);
+  border-bottom: 2px solid var(--accent-primary);
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-lg);
+}
+
+.item {
+  padding-bottom: var(--spacing-lg);
+  border-bottom: 1px solid var(--border-light);
+}
+
+.item:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.itemHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: var(--spacing-md);
+  margin-bottom: var(--spacing-xs);
+}
+
+.itemTitle {
+  display: flex;
+  align-items: baseline;
+  gap: var(--spacing-sm);
+}
+
+.name {
+  font-size: var(--text-lg);
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.nameEn {
+  font-size: var(--text-sm);
+  color: var(--text-secondary);
+}
+
+.period {
+  font-size: var(--text-sm);
+  color: var(--text-muted);
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.itemContent {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xs);
+}
+
+.infoLine {
+  font-size: var(--text-sm);
+  color: var(--text-secondary);
+  margin: 0;
+  line-height: 1.6;
+}
+
+.description {
+  font-size: var(--text-sm);
+  color: var(--text-secondary);
+  margin: var(--spacing-xs) 0 0;
+  line-height: 1.8;
+}
+
+/* 响应式 */
+@media (max-width: 600px) {
+  .itemHeader {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--spacing-xs);
+  }
+}
+
+/* 技能模块 */
+.skillsList {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+}
+
+.skillItem {
+  display: flex;
+  align-items: baseline;
+  gap: var(--spacing-md);
+}
+
+.skillCategory {
+  font-size: var(--text-sm);
+  font-weight: 500;
+  color: var(--text-primary);
+  min-width: 80px;
+  flex-shrink: 0;
+}
+
+.skillItems {
+  font-size: var(--text-sm);
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+/* 获奖成果 */
+.awardList {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xs);
+}
+
+.awardItem {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+  font-size: var(--text-sm);
+  color: var(--text-secondary);
+  text-decoration: none;
+  padding: var(--spacing-xs) 0;
+}
+
+.awardItemLink {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+  font-size: var(--text-sm);
+  color: var(--text-secondary);
+  text-decoration: none;
+  padding: var(--spacing-xs) 0;
+  transition: opacity 0.2s;
+}
+
+.awardItemLink:hover {
+  opacity: 0.7;
+}
+
+.awardItemLink:hover .awardTitle {
+  color: var(--accent-primary);
+}
+
+.awardItem:hover .awardTitle {
+  color: var(--accent-primary);
+}
+
+.awardTitle {
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+.awardLevel {
+  color: var(--text-secondary);
+}
+
+.awardDate {
+  color: var(--text-muted);
+  margin-left: auto;
+  flex-shrink: 0;
+}
