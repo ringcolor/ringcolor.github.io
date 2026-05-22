@@ -89,6 +89,6 @@ MIT License
 
 ## Author
 
-**Zhuyu Teng**
+**Wenguang Du**
 
 - GitHub: [@wenguang](https://github.com/ringcolor)
