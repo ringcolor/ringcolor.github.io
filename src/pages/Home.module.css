@@ -103,15 +103,22 @@
 }
 
 .viewAll {
-  font-size: 0.9rem;
-  color: var(--text-primary);
+  display: inline-flex;
+  align-items: center;
+  font-size: 0.85rem;
+  padding: 0.35rem 0.75rem;
+  background-color: #000000;
+  color: #ffffff;
   text-decoration: none;
-  transition: color 0.2s;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: all 0.2s;
+  white-space: nowrap;
 }
 
 .viewAll:hover {
-  color: var(--text-secondary);
-  text-decoration: underline;
+  background-color: #1a1a1a;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
 }
 
 /* Works Grid */
