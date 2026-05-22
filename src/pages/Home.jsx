@@ -32,7 +32,16 @@ function Home() {
   const recentPaper = research.papers.slice(0, 1).map(r => ({ ...r, type: 'research', name: r.title }))
   const recentWorks = [...recentPaper, ...recentProject]
 
-  const latestPosts = blog.posts.slice(0, 2)
+  // 按日期降序排序（最新的在前），然后取前2篇
+  const latestPosts = [...blog.posts]
+    .sort((a, b) => {
+      // 将日期格式从 2024.09.22 转换为 2024-09-22 以便比较
+      const dateA = new Date(a.date.replace(/\./g, '-'))
+      const dateB = new Date(b.date.replace(/\./g, '-'))
+      return dateB - dateA
+    })
+    .slice(0, 2)
+  
   const latestNews = news.news.slice(0, 2)
 
   return (
