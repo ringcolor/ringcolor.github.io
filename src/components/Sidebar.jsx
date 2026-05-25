@@ -1,9 +1,12 @@
+import { useState } from 'react'
 import { NavLink } from 'react-router-dom'
 import profile from '../data/profile.json'
 import { getAssetUrl } from '../utils/assets'
 import styles from './Sidebar.module.css'
 
 function Sidebar() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false)
+
   const navItems = [
     { path: '/', label: 'Home' },
     { path: '/cv', label: 'CV' },
@@ -12,6 +15,10 @@ function Sidebar() {
     { path: '/blog', label: 'Blog' },
     // { path: '/gallery', label: 'Gallery' }, // TODO: 待维护后恢复
   ]
+
+  const handleNavClick = () => {
+    setIsMenuOpen(false)
+  }
 
   return (
     <aside className={styles.sidebar}>
@@ -81,6 +88,34 @@ function Sidebar() {
           </div>
         )}
       </div>
+
+      {/* 移动端汉堡菜单按钮 */}
+      <button
+        className={styles.hamburger}
+        onClick={() => setIsMenuOpen(!isMenuOpen)}
+        aria-label="Toggle menu"
+      >
+        <span className={`${styles.hamburgerLine} ${isMenuOpen ? styles.active : ''}`}></span>
+        <span className={`${styles.hamburgerLine} ${isMenuOpen ? styles.active : ''}`}></span>
+        <span className={`${styles.hamburgerLine} ${isMenuOpen ? styles.active : ''}`}></span>
+      </button>
+
+      {/* 移动端导航菜单 */}
+      <nav className={`${styles.mobileNav} ${isMenuOpen ? styles.open : ''}`}>
+        {navItems.map((item) => (
+          <NavLink
+            key={item.path}
+            to={item.path}
+            className={({ isActive }) =>
+              `${styles.mobileNavItem} ${isActive ? styles.active : ''}`
+            }
+            end={item.path === '/'}
+            onClick={handleNavClick}
+          >
+            {item.label}
+          </NavLink>
+        ))}
+      </nav>
     </aside>
   )
 }
