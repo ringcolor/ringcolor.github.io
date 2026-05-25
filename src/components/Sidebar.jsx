@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useRef, useEffect } from 'react'
 import { NavLink } from 'react-router-dom'
 import profile from '../data/profile.json'
 import { getAssetUrl } from '../utils/assets'
@@ -6,6 +6,7 @@ import styles from './Sidebar.module.css'
 
 function Sidebar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const sidebarRef = useRef(null)
 
   const navItems = [
     { path: '/', label: 'Home' },
@@ -20,8 +21,24 @@ function Sidebar() {
     setIsMenuOpen(false)
   }
 
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (sidebarRef.current && !sidebarRef.current.contains(event.target)) {
+        setIsMenuOpen(false)
+      }
+    }
+
+    if (isMenuOpen) {
+      document.addEventListener('mousedown', handleClickOutside)
+    }
+
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside)
+    }
+  }, [isMenuOpen])
+
   return (
-    <aside className={styles.sidebar}>
+    <aside className={styles.sidebar} ref={sidebarRef}>
       <div className={styles.profile}>
         <div className={styles.avatar}>
           {profile.avatar ? (
