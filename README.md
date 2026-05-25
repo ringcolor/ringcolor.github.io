@@ -50,6 +50,9 @@ git clone https://ringcolor.github.io/Blog.git
 # Navigate to project directory
 cd profile
 
+# Force delete project dependency directory
+rm -rf node_modules
+
 # Install dependencies
 npm install
 
