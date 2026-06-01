@@ -3,8 +3,14 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Wenguang's Personal Blog/Resume" />
+    <meta name="keywords" content="Wenguang, blog, resume, portfolio" />
+    <meta name="author" content="Wenguang" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="format-detection" content="telephone=no, email=no" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <title>Wenguang's Blog/Resume</title>
-    <!-- Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-X03Z2DCKVS"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
@@ -12,9 +18,21 @@
       gtag('js', new Date());
       gtag('config', 'G-X03Z2DCKVS');
     </script>
+    <script src="https://res.wx.qq.com/open/js/jweixin-1.6.0.js"></script>
   </head>
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
+    <script>
+      function isWeChatBrowser() {
+        var ua = window.navigator.userAgent.toLowerCase();
+        return ua.indexOf('micromessenger') > -1;
+      }
+      if (isWeChatBrowser()) {
+        document.addEventListener('DOMContentLoaded', function() {
+          document.body.addEventListener('touchstart', function() {}, {passive: true});
+        });
+      }
+    </script>
   </body>
 </html>
