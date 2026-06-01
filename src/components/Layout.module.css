@@ -24,7 +24,7 @@
 
   .main {
     margin-left: 0;
-    padding: var(--spacing-lg);
-    padding-top: calc(60px + var(--spacing-lg));
+    padding: var(--spacing-sm);
+    padding-top: calc(60px + var(--spacing-sm));
   }
 }
