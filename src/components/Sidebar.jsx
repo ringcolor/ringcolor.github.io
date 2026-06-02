@@ -40,17 +40,19 @@ function Sidebar() {
   return (
     <aside className={styles.sidebar} ref={sidebarRef}>
       <div className={styles.profile}>
-        <div className={styles.avatar}>
-          {profile.avatar ? (
-            <img src={getAssetUrl(profile.avatar)} alt={profile.name} />
-          ) : (
-            <div className={styles.avatarPlaceholder}>
-              {profile.name.charAt(0)}
-            </div>
-          )}
-        </div>
-        <h1 className={styles.name}>{profile.name}</h1>
-        <p className={styles.nameEn}>{profile.nameEn}</p>
+        <NavLink to="/" className={styles.profileLink} onClick={handleNavClick}>
+          <div className={styles.avatar}>
+            {profile.avatar ? (
+              <img src={getAssetUrl(profile.avatar)} alt={profile.name} />
+            ) : (
+              <div className={styles.avatarPlaceholder}>
+                {profile.name.charAt(0)}
+              </div>
+            )}
+          </div>
+          <h1 className={styles.name}>{profile.name}</h1>
+          <p className={styles.nameEn}>{profile.nameEn}</p>
+        </NavLink>
         <p className={styles.title}>{profile.title}</p>
       </div>
 

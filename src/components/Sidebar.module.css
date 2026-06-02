@@ -17,6 +17,16 @@
   margin-bottom: var(--spacing-2xl);
 }
 
+.profileLink {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+
+.profileLink:hover .name {
+  color: var(--text-primary);
+}
+
 .avatar {
   width: 100px;
   height: 100px;
