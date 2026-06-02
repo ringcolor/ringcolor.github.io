@@ -18,13 +18,21 @@
 }
 
 .profileLink {
-  display: block;
+  display: inline-block;
   text-decoration: none;
   color: inherit;
 }
 
 .profileLink:hover .name {
   color: var(--text-primary);
+}
+
+@media (max-width: 768px) {
+  .profileLink {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-md);
+  }
 }
 
 .avatar {
