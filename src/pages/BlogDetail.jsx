@@ -1,4 +1,5 @@
-import { useParams, Link, useEffect } from 'react-router-dom'
+import { useParams, Link } from 'react-router-dom'
+import { useEffect } from 'react'
 import ReactMarkdown from 'react-markdown'
 import remarkGfm from 'remark-gfm'
 import blog from '../data/blog.json'

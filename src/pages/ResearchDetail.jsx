@@ -1,4 +1,5 @@
-import { useParams, Link, useEffect } from 'react-router-dom'
+import { useParams, Link } from 'react-router-dom'
+import { useEffect } from 'react'
 import research from '../data/research.json'
 import { getAssetUrl } from '../utils/assets'
 import ImagePreview from '../components/ImagePreview'
