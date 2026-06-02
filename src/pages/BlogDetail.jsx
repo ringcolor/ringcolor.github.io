@@ -1,4 +1,4 @@
-import { useParams, Link } from 'react-router-dom'
+import { useParams, Link, useEffect } from 'react-router-dom'
 import ReactMarkdown from 'react-markdown'
 import remarkGfm from 'remark-gfm'
 import blog from '../data/blog.json'
@@ -9,6 +9,11 @@ import styles from './BlogDetail.module.css'
 function BlogDetail() {
   const { id } = useParams()
   const post = blog.posts.find((p) => p.id === id)
+
+  useEffect(() => {
+    // 页面加载时滚动到顶部
+    window.scrollTo({ top: 0, left: 0, behavior: 'instant' })
+  }, [id])
 
   const scrollToSection = (index) => {
     const element = document.getElementById(`section-${index}`)

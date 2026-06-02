@@ -1,4 +1,4 @@
-import { useParams, Link } from 'react-router-dom'
+import { useParams, Link, useEffect } from 'react-router-dom'
 import research from '../data/research.json'
 import { getAssetUrl } from '../utils/assets'
 import ImagePreview from '../components/ImagePreview'
@@ -7,6 +7,11 @@ import styles from './ResearchDetail.module.css'
 function ResearchDetail() {
   const { id } = useParams()
   const paper = research.papers.find((p) => p.id === id)
+
+  useEffect(() => {
+    // 页面加载时滚动到顶部
+    window.scrollTo({ top: 0, left: 0, behavior: 'instant' })
+  }, [id])
 
   const scrollToSection = (index) => {
     const element = document.getElementById(`section-${index}`)
