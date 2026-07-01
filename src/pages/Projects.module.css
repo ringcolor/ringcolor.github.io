@@ -1,15 +1,20 @@
+.projects {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
 .pageTitle {
-  font-size: var(--text-3xl);
+  font-size: 2rem;
   font-weight: 700;
   color: var(--text-primary);
-  margin-bottom: var(--spacing-md);
+  margin: 0 0 0.5rem;
 }
 
 .pageDescription {
-  font-size: var(--text-base);
   color: var(--text-secondary);
-  margin-bottom: var(--spacing-2xl);
-  line-height: 1.6;
+  margin: 0 0 2rem;
+  font-size: 1rem;
 }
 
 .grid {
