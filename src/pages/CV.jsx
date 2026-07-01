@@ -9,11 +9,6 @@ import styles from './CV.module.css'
 function CV() {
   return (
     <div className={styles.cv}>
-      <h1 className={styles.pageTitle}>CV</h1>
-      <p className={styles.pageDescription}>
-        我的学术背景、实习经历和个人技能
-      </p>
-
       {/* 教育背景 */}
       <section className={styles.section}>
         <h2 className={styles.sectionTitle}>教育背景</h2>
